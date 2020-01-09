@@ -1,0 +1,21 @@
+  
+{
+    "name": "Perspective | Prototyping",
+    "url": "https://perspective.angelsolutions.co.uk",
+    "author": {
+        "name": "Dave Osborn",
+        "email": "hello@maxpower.com",
+        "handle": "@_DaveOsborn",
+        "avatar": "/images/blog/author.jpg"
+    },
+    "images": {
+        "favicon": "/images/favicon.ico",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    },
+    "social_links": {
+        "facebook": "https://www.facebook.com",
+        "twitter": "https://twitter.com/_DaveOsborn",
+        "linkedin": "https://www.linkedin.com"
+    }
+}

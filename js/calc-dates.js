@@ -1,0 +1,1 @@
+moment().format(),$(".js-time").each(function(){timeFromNow=moment($(this).attr("data-date")).fromNow(),$(this).addClass("smallprint").text(moment($(this).attr("data-date")).format("DD/MM/YY")),$(this).parent().append('<p class="milli flush">'+timeFromNow+"</p>")});

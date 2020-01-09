@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include psp-pro-head.html %}
+
+  <body>
+    <div class="page-form psp">
+      <div class="page-wrapper master--static">
+          {% include psp-header.html %}
+          {% include psp-nav.html %}
+
+          <div class="page-content group">
+            <div class="page-width">
+                {{ content }}
+            </div>
+          </div>
+      </div>
+
+
+    {% include psp-pro-footer.html %}
+</div>
+  {% if page.custom-js %}
+    {% for customjs in page.custom-js %}
+      <script src='/js/{{customjs}}.js' type="text/javascript"></script>
+    {% endfor %}
+  {% endif %}
+  </body>
+</html>

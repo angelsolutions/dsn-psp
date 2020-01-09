@@ -1,0 +1,1 @@
+var source=$("#handle-bar--data").html(),template=Handlebars.compile(source);$(".handle-bar--data").append(template(reportData));

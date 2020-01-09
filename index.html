@@ -1,0 +1,16 @@
+---
+layout: layouts/default.html
+siteTitle: Giffleball
+images:
+  - bird.jpg
+  - chicken.jpg
+  - parrot.gif
+---
+<!doctype html>
+  <h1>{{ siteTitle }}</h1>
+<ul>
+{% for filename in images %}
+{% capture path %}img/{{ filename }}{% endcapture %}
+ <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a> {{ path | filesize }}</li>
+{% endfor %}
+</ul>
