@@ -1,0 +1,526 @@
+---
+layout: layouts/default.html
+---
+  <div class="grid">
+	<div class="grid__item palm-one-whole lap-one-whole one-third">
+		<h1 id="cphMain_tdEdit_Heading"><i class="entypo--target"></i><span id="cphMain_tdEdit_CreateOrEdit"> Edit Target</span>&nbsp;</h1>
+	</div><!--
+--><div class="grid__item palm-one-whole lap-one-whole two-thirds">
+		<div class="float--right--desk push--bottom--below-desk push-half--top--desk ">
+			<a id="cphMain_tdEdit_btnSave" class="btn btn--positive push-half--right--desk" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$btnSave','')"><i class="entypo--floppy"></i>&nbsp;Save</a>
+			
+			
+			<a id="cphMain_tdEdit_btnClone" class="btn btn--quaternary--inverted push-half--right--desk" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$btnClone','')"><i class="entypo--level-down"></i>&nbsp;Cascade Target</a>
+			<a id="cphMain_tdEdit_btnBack" class="btn btn--quaternary--inverted" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$btnBack','')">
+				<i class="entypo--back"></i>&nbsp;Back
+			</a>
+		</div>
+	</div>
+</div>
+
+  <div class="grid form-fields">
+	
+	<div class="grid__item one-half below-desk-one-whole">
+		<!-- Top section title priority and description in order of importance -->
+        <div class="">
+		<div class="grid">
+			<div class="grid__item palm-one-whole two-thirds">
+				<div id="title">
+					<label for="cphMain_tdEdit_txtTitle" id="cphMain_tdEdit_lblTitle"><strong>Title</strong></label>
+					<input name="ctl00$cphMain$tdEdit$txtTitle" type="text" value="Test Target" maxlength="50" id="cphMain_tdEdit_txtTitle" tabindex="1" class="text-input">
+				</div>
+			</div><!--
+		--><div id="priority" class="grid__item palm-one-whole one-third">
+				<label for="cphMain_tdEdit_ddlPriority" id="cphMain_tdEdit_lblPriority"><strong>Priority</strong></label>
+				<select name="ctl00$cphMain$tdEdit$ddlPriority" id="cphMain_tdEdit_ddlPriority" tabindex="2">
+	<option value="10">High</option>
+	<option value="11">Medium</option>
+	<option value="12">Low</option>
+	<option selected="selected" value="13">Key</option>
+
+</select>
+			</div><!--
+		--><div id="description" class="grid__item palm-one-whole one-whole">
+				<label for="cphMain_tdEdit_txtDescription" id="cphMain_tdEdit_lblDescription"><strong>Description</strong></label>
+				<textarea name="ctl00$cphMain$tdEdit$txtDescription" rows="4" cols="20" id="cphMain_tdEdit_txtDescription" tabindex="2" class="tbDescription text-input js-description" maxcharacters="30000">This is a description</textarea>
+			</div><!--
+		--><div class="grid__item">
+        </div><!--
+		--><div id="responsible" class="grid__item palm-one-whole one-half">
+        
+				<label for="cphMain_tdEdit_uddlResponsible" id="cphMain_tdEdit_lblResponsible"><strong>Responsible</strong></label>
+			
+
+<input type="hidden" name="ctl00$cphMain$tdEdit$uddlResponsible$hdnControlId" id="cphMain_tdEdit_uddlResponsible_hdnControlId" value="cphMain_tdEdit_uddlResponsible">
+
+<div id="cphMain_tdEdit_uddlResponsible" class="text--left">
+    <div class="form-fields auto--sides option2 dropdownWithCheckbox suppressed" data-bind="css: { suppressed: !showArchivedCheckbox }">
+        <div class="selectCheckboxWrapper" data-bind="visible: showArchivedCheckbox" style="display: none;">
+            <div class="selectCheckboxInner">
+                <input type="checkbox" id="chkShowArchived_cphMain_tdEdit_uddlResponsible" data-bind="checked: showArchived"> <label for="chkShowArchived_cphMain_tdEdit_uddlResponsible" class=""> 
+                        <span class="checkboxLabel ">
+                            <span class="checkboxInfo">Include archived users in dropdown</span>
+                            <!--?xml version="1.0" encoding="utf-8"?-->
+                            
+                            <svg version="1.1" id="Archive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20" height="20">
+                            <path fill="#273645" d="M13.981,2H6.018c0,0-0.996,0-0.996,1h9.955C14.977,2,13.981,2,13.981,2z M16.968,5c0-1-0.995-1-0.995-1H4.027
+	                            c0,0-0.995,0-0.995,1v1h13.936V5z M18.958,6C18.37,5.408,18.37,5.408,18.37,5.408V7H1.63V5.408c0,0,0,0-0.589,0.592
+	                            C0.452,6.592,0.03,6.75,0.267,8c0.236,1.246,1.379,8.076,1.549,9c0.186,1.014,1.217,1,1.217,1h13.936c0,0,1.03,0.014,1.217-1
+	                            c0.17-0.924,1.312-7.754,1.549-9C19.97,6.75,19.548,6.592,18.958,6z M14,11.997C14,12.551,13.551,13,12.997,13H7.003
+	                            C6.449,13,6,12.551,6,11.997V10h1v2h6v-2h1V11.997z"></path>
+                            </svg>
+                        </span>
+                    </label>
+            </div>
+        </div>
+        
+            
+            <div class="multiselect js-multi_cphMain_tdEdit_uddlResponsible ">
+                <div class="selectBox position--relative" data-bind="click: toggleShowDropdown">
+                    <label for="ddlSingle_cphMain_tdEdit_uddlResponsible" class="label-with-icon" data-bind="visible: selectedIds().length > 0, click: clearSelection">
+                        <span class="dropdown-cancel">
+                            <!--?xml version="1.0" encoding="utf-8"?-->
+                            
+                            <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                            <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                            c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                            L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                            C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                            </svg>
+                        </span>
+                    </label>
+                    <select id="ddlSingle_cphMain_tdEdit_uddlResponsible">
+                        <option data-bind="text: boxText">Maria Viejo (HEAD)</option>
+                    </select>
+                    <div class="overSelected"></div>
+                </div>
+                    
+                <div class="select-with-search" data-bind="visible: showDropdown" style="display: none;">
+                    <label for="searchInputSingle_cphMain_tdEdit_uddlResponsible" class="label-with-icon" data-bind="click: clearSearch, visible: searchText().length > 0" style="display: none;">
+                       <span class="dropdown-cancel">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+                        
+                        <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                        c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                        L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                        C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                        </svg>
+                        </span>
+                    </label>
+                    <input id="searchInputSingle_cphMain_tdEdit_uddlResponsible" placeholder="Search" data-bind="textInput: searchText" class="selectCheckboxSearch">
+                    <div class="select-with-search--userlist">
+                        <!-- ko if: filteredActiveUsers().length > 0 -->
+                            <strong class="line-height--two">Active Users</strong>
+                            <ul class="single-select--list" data-bind="foreach: filteredActiveUsers">
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Adam Bramhill</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Alex Clayton (AC)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Chris Angel (CA)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Grace Snow (G1)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Katerina Gk</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Maria Viejo (HEAD)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Nerea Tejedo Secondary (NTJ)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Sarah Noblett</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Tim Stone (TS)</li>
+                            </ul>
+                        <!-- /ko -->
+                        <div class="js-archivedUsers">
+                        <!-- ko template: { if: filteredArchivedUsers().length > 0, afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        <!-- ko template: { if: (showArchived() && filteredArchivedUsers().length < 1), afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+    </div>
+
+    <input name="ctl00$cphMain$tdEdit$uddlResponsible$hdnJavascriptSelectedId" type="hidden" id="cphMain_tdEdit_uddlResponsible_hdnJavascriptSelectedId" class="js-uddlSelectedId" value="[58763]">
+    <input name="ctl00$cphMain$tdEdit$uddlResponsible$hdnJavascriptShowArchived" type="hidden" id="cphMain_tdEdit_uddlResponsible_hdnJavascriptShowArchived" class="js-uddlShowArchived">
+    <input type="hidden" name="ctl00$cphMain$tdEdit$uddlResponsible$hdnSelectedIdPersist" id="cphMain_tdEdit_uddlResponsible_hdnSelectedIdPersist" value="[58763]">
+    <input type="hidden" name="ctl00$cphMain$tdEdit$uddlResponsible$hdnShowArchivedPersist" id="cphMain_tdEdit_uddlResponsible_hdnShowArchivedPersist" value="False">
+</div> 
+			</div><!--
+		--><div id="monitor" class="grid__item palm-one-whole one-half">
+				<label for="cphMain_tdEdit_uddlMonitor" id="cphMain_tdEdit_lblMonitor"><strong>Monitor</strong></label>
+
+<input type="hidden" name="ctl00$cphMain$tdEdit$uddlMonitor$hdnControlId" id="cphMain_tdEdit_uddlMonitor_hdnControlId" value="cphMain_tdEdit_uddlMonitor">
+
+<div id="cphMain_tdEdit_uddlMonitor" class="text--left">
+    <div class="form-fields auto--sides option2 dropdownWithCheckbox suppressed" data-bind="css: { suppressed: !showArchivedCheckbox }">
+        <div class="selectCheckboxWrapper" data-bind="visible: showArchivedCheckbox" style="display: none;">
+            <div class="selectCheckboxInner">
+                <input type="checkbox" id="chkShowArchived_cphMain_tdEdit_uddlMonitor" data-bind="checked: showArchived"> <label for="chkShowArchived_cphMain_tdEdit_uddlMonitor" class=""> 
+                        <span class="checkboxLabel ">
+                            <span class="checkboxInfo">Include archived users in dropdown</span>
+                            <!--?xml version="1.0" encoding="utf-8"?-->
+                            
+                            <svg version="1.1" id="Archive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20" height="20">
+                            <path fill="#273645" d="M13.981,2H6.018c0,0-0.996,0-0.996,1h9.955C14.977,2,13.981,2,13.981,2z M16.968,5c0-1-0.995-1-0.995-1H4.027
+	                            c0,0-0.995,0-0.995,1v1h13.936V5z M18.958,6C18.37,5.408,18.37,5.408,18.37,5.408V7H1.63V5.408c0,0,0,0-0.589,0.592
+	                            C0.452,6.592,0.03,6.75,0.267,8c0.236,1.246,1.379,8.076,1.549,9c0.186,1.014,1.217,1,1.217,1h13.936c0,0,1.03,0.014,1.217-1
+	                            c0.17-0.924,1.312-7.754,1.549-9C19.97,6.75,19.548,6.592,18.958,6z M14,11.997C14,12.551,13.551,13,12.997,13H7.003
+	                            C6.449,13,6,12.551,6,11.997V10h1v2h6v-2h1V11.997z"></path>
+                            </svg>
+                        </span>
+                    </label>
+            </div>
+        </div>
+        
+            
+            <div class="multiselect js-multi_cphMain_tdEdit_uddlMonitor ">
+                <div class="selectBox position--relative" data-bind="click: toggleShowDropdown">
+                    <label for="ddlSingle_cphMain_tdEdit_uddlMonitor" class="label-with-icon" data-bind="visible: selectedIds().length > 0, click: clearSelection">
+                        <span class="dropdown-cancel">
+                            <!--?xml version="1.0" encoding="utf-8"?-->
+                            
+                            <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                            <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                            c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                            L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                            C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                            </svg>
+                        </span>
+                    </label>
+                    <select id="ddlSingle_cphMain_tdEdit_uddlMonitor">
+                        <option data-bind="text: boxText">Maria Viejo (HEAD)</option>
+                    </select>
+                    <div class="overSelected"></div>
+                </div>
+                    
+                <div class="select-with-search" data-bind="visible: showDropdown" style="display: none;">
+                    <label for="searchInputSingle_cphMain_tdEdit_uddlMonitor" class="label-with-icon" data-bind="click: clearSearch, visible: searchText().length > 0" style="display: none;">
+                       <span class="dropdown-cancel">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+                        
+                        <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                        c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                        L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                        C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                        </svg>
+                        </span>
+                    </label>
+                    <input id="searchInputSingle_cphMain_tdEdit_uddlMonitor" placeholder="Search" data-bind="textInput: searchText" class="selectCheckboxSearch">
+                    <div class="select-with-search--userlist">
+                        <!-- ko if: filteredActiveUsers().length > 0 -->
+                            <strong class="line-height--two">Active Users</strong>
+                            <ul class="single-select--list" data-bind="foreach: filteredActiveUsers">
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Adam Bramhill</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Alex Clayton (AC)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Chris Angel (CA)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Grace Snow (G1)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Katerina Gk</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Maria Viejo (HEAD)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Nerea Tejedo Secondary (NTJ)</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Sarah Noblett</li>
+                            
+                                <li data-bind="text: $data.nameForDropDowns, click: $parent.singleSelect.bind(this, $data.id)" class="single-select--item">Tim Stone (TS)</li>
+                            </ul>
+                        <!-- /ko -->
+                        <div class="js-archivedUsers">
+                        <!-- ko template: { if: filteredArchivedUsers().length > 0, afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        <!-- ko template: { if: (showArchived() && filteredArchivedUsers().length < 1), afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+    </div>
+
+    <input name="ctl00$cphMain$tdEdit$uddlMonitor$hdnJavascriptSelectedId" type="hidden" id="cphMain_tdEdit_uddlMonitor_hdnJavascriptSelectedId" class="js-uddlSelectedId" value="[58763]">
+    <input name="ctl00$cphMain$tdEdit$uddlMonitor$hdnJavascriptShowArchived" type="hidden" id="cphMain_tdEdit_uddlMonitor_hdnJavascriptShowArchived" class="js-uddlShowArchived">
+    <input type="hidden" name="ctl00$cphMain$tdEdit$uddlMonitor$hdnSelectedIdPersist" id="cphMain_tdEdit_uddlMonitor_hdnSelectedIdPersist" value="[58763]">
+    <input type="hidden" name="ctl00$cphMain$tdEdit$uddlMonitor$hdnShowArchivedPersist" id="cphMain_tdEdit_uddlMonitor_hdnShowArchivedPersist" value="False">
+</div> 
+
+			</div><!--
+		--><div id="type" class="grid__item palm-one-whole one-half">
+				<label for="cphMain_tdEdit_rbTargetType" id="cphMain_tdEdit_lblTargetType"><strong>Type</strong></label>
+				<select name="ctl00$cphMain$tdEdit$rbTargetType" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cphMain$tdEdit$rbTargetType\',\'\')', 0)" id="cphMain_tdEdit_rbTargetType" disabled="disabled" tabindex="4" class="muted">
+	<option selected="selected" value="team">Team</option>
+	<option value="personal">Personal</option>
+
+</select>
+			</div><!--
+		--><div id="team" class="grid__item palm-one-whole one-half">
+				<label for="cphMain_tdEdit_ddlTeam" id="cphMain_tdEdit_lblTeam"><strong>Team</strong></label>
+				<select name="ctl00$cphMain$tdEdit$ddlTeam" onchange="javascript:setTimeout('__doPostBack(\'ctl00$cphMain$tdEdit$ddlTeam\',\'\')', 0)" id="cphMain_tdEdit_ddlTeam" tabindex="5">
+	<option value="47209">English</option>
+	<option value="36352">Maths (MTH)</option>
+	<option value="58419">PE (PE)</option>
+	<option selected="selected" value="21446">SLT (SLT)</option>
+	<option value="58418">Science (SCI)</option>
+
+</select>
+			</div><!--
+		--><!--
+		--><div id="status" class="grid__item palm-one-whole one-half">
+				<label for="cphMain_tdEdit_ddlStatus" id="cphMain_tdEdit_lblStatus"><strong>Status</strong></label>
+				<select name="ctl00$cphMain$tdEdit$ddlStatus" id="cphMain_tdEdit_ddlStatus" tabindex="6">
+	<option value="13">Cancelled</option>
+	<option value="12">Completed</option>
+	<option value="14">Deferred</option>
+	<option value="11">In Progress</option>
+	<option selected="selected" value="10">Not Started</option>
+
+</select>
+			</div><!--
+		--><div id="challenge" class="grid__item palm-one-whole one-half">
+				<label for="cphMain_tdEdit_ddlChallenge" id="cphMain_tdEdit_lblChallenge"><strong>Challenge</strong></label>
+				<select name="ctl00$cphMain$tdEdit$ddlChallenge" id="cphMain_tdEdit_ddlChallenge" tabindex="7">
+	<option selected="selected" value="NotSet">Not Set</option>
+	<option value="Low">Low</option>
+	<option value="Medium">Medium</option>
+	<option value="High">High</option>
+
+</select>
+			</div><!--
+		--><!--
+		--><div id="dates" class="grid__item palm-one-whole one-whole">
+				
+
+<div class="date-range">
+
+    <label for="cphMain_tdEdit_aysTimescale_ddlDateRange" id="cphMain_tdEdit_aysTimescale_dateLbl"><strong>Dates</strong></label>
+
+    <select name="ctl00$cphMain$tdEdit$aysTimescale$ddlDateRange" id="cphMain_tdEdit_aysTimescale_ddlDateRange" tabindex="10" class="js-year-type">
+	<option value="-1,01/09/18,31/08/19">Academic Year 2018/2019</option>
+	<option value="0,01/09/19,31/08/20">Academic Year 2019/2020</option>
+	<option value="1,01/09/20,31/08/21">Academic Year 2020/2021</option>
+	<option value="2,01/09/21,31/08/22">Academic Year 2021/2022</option>
+	<option value="3,01/09/22,31/08/23">Academic Year 2022/2023</option>
+	<option selected="selected" value="9999,01/09/19,31/08/20,01/09/19,31/08/20">Custom Date Range</option>
+
+</select>
+
+    <input type="hidden" name="ctl00$cphMain$tdEdit$aysTimescale$hdnDataRange" id="cphMain_tdEdit_aysTimescale_hdnDataRange" value="5">
+
+    <div class="date-push">
+        <label for="cphMain_tdEdit_aysTimescale_txtDateFrom" class="date-range__label label-with-icon"><strong>from</strong> <span class="entypo--calendar"></span></label><!--
+        --><input name="ctl00$cphMain$tdEdit$aysTimescale$txtDateFrom" type="text" value="01/09/19" id="cphMain_tdEdit_aysTimescale_txtDateFrom" class="js-date-picker js-date-from text-input hasDatepicker" readonly="true"><!--
+        --><label for="cphMain_tdEdit_aysTimescale_txtDateTo" class="date-range__label label-with-icon"><strong>to</strong> <span class="entypo--calendar"></span></label><!--
+        --><input name="ctl00$cphMain$tdEdit$aysTimescale$txtDateTo" type="text" value="31/08/20" id="cphMain_tdEdit_aysTimescale_txtDateTo" class="js-date-picker js-date-to text-input hasDatepicker" readonly="true">
+    </div>
+
+</div>
+			</div>
+		</div>
+        </div>
+	</div><!--
+--><div class="grid__item one-half below-desk-one-whole">
+		<div id="strategy" class="">
+			<label for="cphMain_tdEdit_txtStrategy" id="cphMain_tdEdit_lblStrategy"><strong>Strategy</strong></label>
+			<textarea name="ctl00$cphMain$tdEdit$txtStrategy" rows="4" cols="20" id="cphMain_tdEdit_txtStrategy" tabindex="9" class="text-input"></textarea>
+    <div id="cphMain_tdEdit_scEdit_lvSuccessCriteria_successCriteriaHolder" class="teamTableHolder" style="overflow:hidden">
+	
+            <table class="table--status">
+                <thead>
+                    <tr>
+                        <th>Success Criteria:</th>
+                        <th style="width:2.5em">Complete</th>
+                        <th style="width:10.2em"></th>
+                    </tr>
+                </thead>
+                
+        <tbody><tr class="block--positive height--auto">
+            <td>
+                <span id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lblSuccessCriteriaNumber_0" class="successNum">1</span>.
+                SC1
+            </td>
+            <td style="text-align:center;"><input id="cphMain_tdEdit_scEdit_lvSuccessCriteria_chkHasBeenMet_0" type="checkbox" name="ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl0$chkHasBeenMet" onclick="javascript:setTimeout('__doPostBack(\'ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl0$chkHasBeenMet\',\'\')', 0)"></td>
+            <td id="cphMain_tdEdit_scEdit_lvSuccessCriteria_tdButtons_0" style="text-align:right;" class="last">
+                <input type="hidden" name="ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl0$hfIndex" id="cphMain_tdEdit_scEdit_lvSuccessCriteria_hfIndex_0" value="0">
+                <a id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lnkEdit_0" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl0$lnkEdit','')" style="padding-right:5px;">Edit</a>
+                <a id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lnkDelete_0" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl0$lnkDelete','')">Delete <span class=" entypo--cancel-circled" title="Delete"></span></a>
+            </td>
+	
+        </tr>
+    
+        <tr class="block--positive height--auto">
+            <td>
+                <span id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lblSuccessCriteriaNumber_1" class="successNum">2</span>.
+                SC2
+            </td>
+            <td style="text-align:center;"><input id="cphMain_tdEdit_scEdit_lvSuccessCriteria_chkHasBeenMet_1" type="checkbox" name="ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl1$chkHasBeenMet" onclick="javascript:setTimeout('__doPostBack(\'ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl1$chkHasBeenMet\',\'\')', 0)"></td>
+            <td id="cphMain_tdEdit_scEdit_lvSuccessCriteria_tdButtons_1" style="text-align:right;" class="last">
+                <input type="hidden" name="ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl1$hfIndex" id="cphMain_tdEdit_scEdit_lvSuccessCriteria_hfIndex_1" value="1">
+                <a id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lnkEdit_1" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl1$lnkEdit','')" style="padding-right:5px;">Edit</a>
+                <a id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lnkDelete_1" href="javascript:__doPostBack('ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl1$lnkDelete','')">Delete <span class=" entypo--cancel-circled" title="Delete"></span></a>
+            </td>
+	
+        </tr>
+    
+        <tr class="block--not-started">
+            <td>
+                <span id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lblSuccessCriteriaNumber" class="successNum">3</span>.&nbsp;
+                <input name="ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl2$txtDescription" type="text" id="cphMain_tdEdit_scEdit_lvSuccessCriteria_txtDescription" tabindex="10" style="width:90%;">
+                <span id="cphMain_tdEdit_scEdit_lvSuccessCriteria_rfvAddDescription" style="display:none;">*</span>
+                
+            </td>
+            <td style="text-align:center;"><input id="cphMain_tdEdit_scEdit_lvSuccessCriteria_chkHasBeenMet" type="checkbox" name="ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl2$chkHasBeenMet"></td>
+            <td style="text-align:right" class="last">
+                <a id="cphMain_tdEdit_scEdit_lvSuccessCriteria_lnkInsert" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphMain$tdEdit$scEdit$lvSuccessCriteria$ctrl2$lnkInsert&quot;, &quot;&quot;, true, &quot;groupAddCriteria&quot;, &quot;&quot;, false, true))">Add <span class=" entypo--plus-circled" title="Add Team"></span></a>
+            </td>
+        </tr>
+    
+                
+            </tbody></table>
+        
+</div>
+    
+
+		</div>
+
+
+        <hr class="rule flush--top push-half--bottom" />
+
+        <h2 class="delta flush float--left soft-half--right">Development Plan(s):</h2>
+        <button class="btn btn--quaternary--inverted js-team-toggle float--right">
+            <span class="is-default"><span class="entypo--plus-circled"></span> Add to more</span>
+            <span class="is-empty visuallyhidden"><span class="entypo--plus-circled"></span> Add to a plan</span>
+            <span class="is-open visuallyhidden"><span class="entypo--cancel-circled"></span> Close</span>
+        </button>
+        <ul class="no-list-style push-half--top js-selected-plan-list flush--bottom">
+        {% for team in teamList %}
+            <li id="team-selected{{forloop.index}}" data-index="{{forloop.index}}" class="js-remove selectable-pill {% if team.code != "SLG" %}visuallyhidden{% endif %} "><strong>{{team.name}}</strong> ({{team.code | capitalize }}) <span class="entypo--cancel"></span></li>
+        {% endfor %}
+            <li class="selectable-pill push-half--left no-plans visuallyhidden">Not part of any plans</li>
+        </ul>
+
+    
+
+
+<div class="full-team-list visuallyhidden">
+<p class="clear--both">Choose which team plan(s) you would like to add this target to:</p>
+
+<ul class="no-list-style push-half--top">
+ {% for team in teamList %}
+    <li id="team{{forloop.index}}" data-index="{{forloop.index}}" class="js-selectable-pill selectable-pill {% if team.code == "SLG" %}is-selected{% endif %} "><strong>{{team.name}}</strong> ({{team.code | capitalize }})</li>
+ {% endfor %}
+</ul>
+</div>
+<hr class="rule push-half--ends" />
+
+
+	</div>
+</div>
+
+<ul class="nav nav--tabs push--top js-nav-menu">
+		<li class="js-actions">
+			<a itemid="0" class="nav--tabs__selected-item">Actions</a>
+		</li>
+		<li class="js-targets">
+			<a itemid="1">Targets</a>
+		</li>
+		<li class="js-costs">
+			<a itemid="2">Costs</a>
+		</li>
+		<li class="js-evaluation">
+			<a id="cphMain_ttsEdit_EvaluationTabText" itemid="3">Monitoring</a>
+		</li>
+		<li class="js-needs">
+			<a itemid="4">CPD Needs</a>
+		</li>
+		<li class="js-themes">
+			<a itemid="5">Themes</a>
+		</li>
+		<li class="js-attachments">
+			<a itemid="6">Attachments</a>
+		</li>
+		<li class="js-notes">
+			<a itemid="7">Notes</a>
+		</li>
+        <li class="js-relatedQuestion">
+            <a id="cphMain_ttsEdit_RelatedQuestionTab" item="8">Related Question</a>
+        </li>
+	</ul>
+
+  <div>
+	<ul class="nav legend float--right">
+		<li class="border--not-started">Not started</li>
+		<li class="border--incomplete">In progress / Incomplete</li>
+		<li class="border--positive">Completed</li>
+		<li class="border--negative">Overdue</li>
+		<li class="border--cancelled">Cancelled / Deferred</li>
+	</ul>
+    <span id="cphMain_ttsEdit_ctl01_AddButtonGroup">
+        <a id="cphMain_ttsEdit_ctl01_lnkAddNew" class="btn btn--tertiary push-half--bottom push-half--right" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lnkAddNew','')">Add New Target</a> 
+    </span>
+    <span id="cphMain_ttsEdit_ctl01_addExistingGroup">
+        <a id="cphMain_ttsEdit_ctl01_lnkExisting" class="btn btn--tertiary push-half--bottom" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lnkExisting','')">Add Existing Targets</a> 
+    </span>
+</div>
+
+<table class="table--status">
+            <thead>
+                <tr><th><a id="cphMain_ttsEdit_ctl01_lvTargets_lnkIDSort" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$lnkIDSort','')">Ref</a></th>
+                <th><a id="cphMain_ttsEdit_ctl01_lvTargets_lnkTitleSort" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$lnkTitleSort','')">Title<img src="/Perspective/Images/Misc/sort_up.gif" alt="Sort Ascending" style="border:none;"></a></th>
+                <th><a id="cphMain_ttsEdit_ctl01_lvTargets_LinkButton1" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$LinkButton1','')">Team</a></th>
+                <th><a id="cphMain_ttsEdit_ctl01_lvTargets_lnkStatusSort" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$lnkStatusSort','')">Status</a></th>
+                <th><a id="cphMain_ttsEdit_ctl01_lvTargets_lnkPersonResponsibleNameSort" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$lnkPersonResponsibleNameSort','')">Responsible</a></th>
+                <th><a id="cphMain_ttsEdit_ctl01_lvTargets_lnkPrioritySort" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$lnkPrioritySort','')">Priority</a></th>
+                <th><a id="cphMain_ttsEdit_ctl01_lvTargets_lnkDateEndSort" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$lnkDateEndSort','')">Deadline</a></th>
+                <th colspan="3"></th>
+            </tr></thead>
+            
+        <tbody><tr id="cphMain_ttsEdit_ctl01_lvTargets_DataRow_0" class="block--not-started">
+		<td>47 </td>
+		<td>jhkfgkgh</td>
+		<td>SLT</td>
+		<td>Not Started</td>
+		<td>HEAD</td>
+		<td>Key</td>
+		<td>31/08/20</td>
+		<td>
+	            <div class="flyout flyout--center">
+		            <i class="entypo--info-circled delta icon-link"></i>
+		            <div class="flyout__content whisper islet">
+			            <div>
+				            <strong>Created:</strong> By
+				            Maria Viejo
+				            on
+				            24/10/19
+			            </div>
+			            <div>
+				            <strong>Monitor:</strong>
+				            Maria Viejo
+			            </div>
+			            <div id="cphMain_ttsEdit_ctl01_lvTargets_detailsDescription_0">
+				            <strong>Description:</strong>
+				            
+			            </div>
+		            </div>
+	            </div>
+            </td>
+		<td id="cphMain_ttsEdit_ctl01_lvTargets_lnkDetailsRow_0">
+                <a id="cphMain_ttsEdit_ctl01_lvTargets_lnkDetails_0" href="javascript:__doPostBack('ctl00$cphMain$ttsEdit$ctl01$lvTargets$ctrl0$lnkDetails','')">Details</a>
+            </td>
+		<td>
+                <span id="cphMain_ttsEdit_ctl01_lvTargets_DeleteButton_0">
+					<a class="js-delete-target" href="javascript:" onclick="saveTargetID('444668', 'False', 'False', 'False');">Delete</a>
+                </span>
+            </td>
+	</tr>
+	
+    
+        </tbody></table>
+
+<link rel="stylesheet" href="{{'/css/selectable-pill.css'|url}}">
+<script src="{{'/js/prototyping/targetsToPlan.js'|url}}"></script>

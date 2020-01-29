@@ -1,0 +1,566 @@
+---
+layout: layouts/default.html
+---
+</div>
+<div class="top-holder">
+
+<div class="page-width">
+
+<div class="grid">
+  <div class="grid__item desk-one-third">
+    <h1 class="no-text-transform beta">Targets &amp; Actions</h1>
+  </div><div class="grid__item desk-two-thirds text--right">
+      <button type="button" class="button button--quaternary--inverted"><span class="entypo--plus"></span> New Target
+      </button>
+  
+    <button type="button" class="button button--quaternary--inverted push-half--left"><span class="entypo--plus"></span> New Action
+      </button>
+
+      <button type="button" class="button button--quaternary--inverted push-half--left"><span class="entypo--back"></span> Back
+      </button>
+  </div>
+</div>
+
+
+
+<div class="grid form-fields">
+  <div class="grid__item desk-one-third">
+  <label for="x">Team</label>
+  <select name="" id="x">
+    <option value="0">-- Any --</option>
+    <option value="1"></option>
+  </select>
+  </div><!--
+--><div class="grid__item desk-one-third">
+        <label for="cphMain_TargetsFilter_uddlResponsibleFor" id="cphMain_TargetsFilter_lblResponsible">Responsible:</label>
+
+<input type="hidden" name="ctl00$cphMain$TargetsFilter$uddlResponsibleFor$hdnControlId" id="cphMain_TargetsFilter_uddlResponsibleFor_hdnControlId" value="cphMain_TargetsFilter_uddlResponsibleFor">
+
+<div id="cphMain_TargetsFilter_uddlResponsibleFor" class="text--left">
+    <div class="form-fields auto--sides option2 dropdownWithCheckbox" data-bind="css: { suppressed: !showArchivedCheckbox }">
+        <div class="selectCheckboxWrapper" data-bind="visible: showArchivedCheckbox">
+            <div class="selectCheckboxInner">
+                <input type="checkbox" id="chkShowArchived_cphMain_TargetsFilter_uddlResponsibleFor" data-bind="checked: showArchived"> <label for="chkShowArchived_cphMain_TargetsFilter_uddlResponsibleFor" class=""> 
+                        <span class="checkboxLabel ">
+                            <span class="checkboxInfo">Include archived users in dropdown</span>
+                            <!--?xml version="1.0" encoding="utf-8"?-->
+                            
+                            <svg version="1.1" id="Archive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20" height="20">
+                            <path fill="#273645" d="M13.981,2H6.018c0,0-0.996,0-0.996,1h9.955C14.977,2,13.981,2,13.981,2z M16.968,5c0-1-0.995-1-0.995-1H4.027
+	                            c0,0-0.995,0-0.995,1v1h13.936V5z M18.958,6C18.37,5.408,18.37,5.408,18.37,5.408V7H1.63V5.408c0,0,0,0-0.589,0.592
+	                            C0.452,6.592,0.03,6.75,0.267,8c0.236,1.246,1.379,8.076,1.549,9c0.186,1.014,1.217,1,1.217,1h13.936c0,0,1.03,0.014,1.217-1
+	                            c0.17-0.924,1.312-7.754,1.549-9C19.97,6.75,19.548,6.592,18.958,6z M14,11.997C14,12.551,13.551,13,12.997,13H7.003
+	                            C6.449,13,6,12.551,6,11.997V10h1v2h6v-2h1V11.997z"></path>
+                            </svg>
+                        </span>
+                    </label>
+            </div>
+        </div>
+        
+            <div class="multiselect js-multi_cphMain_TargetsFilter_uddlResponsibleFor ">
+                    
+                <div class="selectBox position--relative" data-bind="click: toggleShowDropdown">
+                    <label for="ddlCheck_cphMain_TargetsFilter_uddlResponsibleFor" class="label-with-icon" data-bind="visible: selectedIds().length > 0, click: clearSelection" style="display: none;">
+                        <span class="dropdown-cancel">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+                        
+                        <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                        c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                        L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                        C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                        </svg>
+                        </span>
+                    </label>
+                    <select id="ddlCheck_cphMain_TargetsFilter_uddlResponsibleFor" data-bind="hasFocus: controlHasFocus">
+                        <option data-bind="text: boxText">Search Users</option>
+                    </select>
+                        
+                    <div class="overSelected"></div>
+                        
+                </div>
+                    
+                <div class="select-with-search" data-bind="visible: showDropdown" style="display: none;">
+                    <label for="searchInput_cphMain_TargetsFilter_uddlResponsibleFor" class="label-with-icon" data-bind="click: clearSearch, visible: searchText().length > 0" style="display: none;">
+                        <span class="dropdown-cancel">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+                        
+                        <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                        c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                        L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                        C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                        </svg>
+                        </span>
+                    </label>
+                    <input id="searchInput_cphMain_TargetsFilter_uddlResponsibleFor" placeholder="Search" data-bind="textInput: searchText, hasFocus: searchHasFocus()" class="selectCheckboxSearch">
+                    <div class="select-with-search--userlist">
+                        <div class="theSelectAllCheckBox" data-bind="visible: filteredArchivedUsers().length > 0" style="display: none;">
+                            <label for="chkSelectAll_cphMain_TargetsFilter_uddlResponsibleFor" class="line-height--two">
+                                <input id="chkSelectAll_cphMain_TargetsFilter_uddlResponsibleFor" type="checkbox" data-bind="checked: selectAll">
+                                <span>Select All</span>
+                            </label>
+                        </div>
+                        <!-- ko if: filteredActiveUsers().length > 0 -->
+
+                            <label for="chkSelectAllActive_cphMain_TargetsFilter_uddlResponsibleFor" class="line-height--two">
+                                <input id="chkSelectAllActive_cphMain_TargetsFilter_uddlResponsibleFor" type="checkbox" data-bind="checked: selectAllActive">
+                                <strong class="line-height--two">Active Users</strong>
+                            </label>
+                            <div style="margin-left: 14.5px" ,="" data-bind="foreach: filteredActiveUsers">
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="236918_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="236918_cphMain_TargetsFilter_uddlResponsibleFor" value="236918">
+                                    <span data-bind="text: $data.nameForDropDowns">Adam Bramhill</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="236103_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="236103_cphMain_TargetsFilter_uddlResponsibleFor" value="236103">
+                                    <span data-bind="text: $data.nameForDropDowns">Alex Clayton (AC)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="113775_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="113775_cphMain_TargetsFilter_uddlResponsibleFor" value="113775">
+                                    <span data-bind="text: $data.nameForDropDowns">Chris Angel (CA)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="141012_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="141012_cphMain_TargetsFilter_uddlResponsibleFor" value="141012">
+                                    <span data-bind="text: $data.nameForDropDowns">Grace Snow (G1)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="227909_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="227909_cphMain_TargetsFilter_uddlResponsibleFor" value="227909">
+                                    <span data-bind="text: $data.nameForDropDowns">Katerina Gk</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="58763_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="58763_cphMain_TargetsFilter_uddlResponsibleFor" value="58763">
+                                    <span data-bind="text: $data.nameForDropDowns">Maria Viejo (HEAD)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="215700_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="215700_cphMain_TargetsFilter_uddlResponsibleFor" value="215700">
+                                    <span data-bind="text: $data.nameForDropDowns">Nerea Tejedo Secondary (NTJ)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="215695_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="215695_cphMain_TargetsFilter_uddlResponsibleFor" value="215695">
+                                    <span data-bind="text: $data.nameForDropDowns">Sarah Noblett</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="214018_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="214018_cphMain_TargetsFilter_uddlResponsibleFor" value="214018">
+                                    <span data-bind="text: $data.nameForDropDowns">Tim Stone (TS)</span>
+                                </label>
+                            </div>
+                        <!-- /ko -->
+                        <div class="js-archivedUsers">
+                        <!-- ko template: { if: filteredArchivedUsers().length > 0, afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        <!-- ko template: { if: (showArchived() && filteredArchivedUsers().length < 1), afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div> 
+
+    </div><!--
+--><div class="grid__item desk-one-third">
+       <label for="p">Priority</label>
+       <select name="p" id="p">
+        <option value="0">-- Any --</option>
+        <option value="1"></option>
+      </select>
+  </div><!--
+--><div class="grid__item desk-one-third">
+    
+  <label for="l">Status</label>
+  <select name="" id="l">
+    <option value="0">-- Any --</option>
+    <option value="1"></option>
+  </select>
+  </div><!--
+--><div class="grid__item desk-one-third">
+    <label for="m">Monitor</label>
+    <div id="cphMain_TargetsFilter_uddlResponsibleFor" class="text--left">
+    <div class="form-fields auto--sides option2 dropdownWithCheckbox" data-bind="css: { suppressed: !showArchivedCheckbox }">
+        <div class="selectCheckboxWrapper" data-bind="visible: showArchivedCheckbox">
+            <div class="selectCheckboxInner">
+                <input type="checkbox" id="chkShowArchived_cphMain_TargetsFilter_uddlResponsibleFor" data-bind="checked: showArchived"> <label for="chkShowArchived_cphMain_TargetsFilter_uddlResponsibleFor" class=""> 
+                        <span class="checkboxLabel ">
+                            <span class="checkboxInfo">Include archived users in dropdown</span>
+                            <!--?xml version="1.0" encoding="utf-8"?-->
+                            
+                            <svg version="1.1" id="Archive" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="20" height="20">
+                            <path fill="#273645" d="M13.981,2H6.018c0,0-0.996,0-0.996,1h9.955C14.977,2,13.981,2,13.981,2z M16.968,5c0-1-0.995-1-0.995-1H4.027
+	                            c0,0-0.995,0-0.995,1v1h13.936V5z M18.958,6C18.37,5.408,18.37,5.408,18.37,5.408V7H1.63V5.408c0,0,0,0-0.589,0.592
+	                            C0.452,6.592,0.03,6.75,0.267,8c0.236,1.246,1.379,8.076,1.549,9c0.186,1.014,1.217,1,1.217,1h13.936c0,0,1.03,0.014,1.217-1
+	                            c0.17-0.924,1.312-7.754,1.549-9C19.97,6.75,19.548,6.592,18.958,6z M14,11.997C14,12.551,13.551,13,12.997,13H7.003
+	                            C6.449,13,6,12.551,6,11.997V10h1v2h6v-2h1V11.997z"></path>
+                            </svg>
+                        </span>
+                    </label>
+            </div>
+        </div>
+        
+            <div class="multiselect js-multi_cphMain_TargetsFilter_uddlResponsibleFor ">
+                    
+                <div class="selectBox position--relative" data-bind="click: toggleShowDropdown">
+                    <label for="ddlCheck_cphMain_TargetsFilter_uddlResponsibleFor" class="label-with-icon" data-bind="visible: selectedIds().length > 0, click: clearSelection" style="display: none;">
+                        <span class="dropdown-cancel">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+                        
+                        <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                        c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                        L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                        C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                        </svg>
+                        </span>
+                    </label>
+                    <select id="ddlCheck_cphMain_TargetsFilter_uddlResponsibleFor" data-bind="hasFocus: controlHasFocus">
+                        <option data-bind="text: boxText">Search Users</option>
+                    </select>
+                        
+                    <div class="overSelected"></div>
+                        
+                </div>
+                    
+                <div class="select-with-search" data-bind="visible: showDropdown" style="display: none;">
+                    <label for="searchInput_cphMain_TargetsFilter_uddlResponsibleFor" class="label-with-icon" data-bind="click: clearSearch, visible: searchText().length > 0" style="display: none;">
+                        <span class="dropdown-cancel">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+                        
+                        <svg version="1.1" id="Cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve" width="16" height="16">
+                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
+	                        c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697c0.469-0.469,1.228-0.469,1.697,0
+	                        L10,8.183l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0c0.469,0.469,0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
+	                        C14.817,13.62,14.817,14.38,14.348,14.849z"></path>
+                        </svg>
+                        </span>
+                    </label>
+                    <input id="searchInput_cphMain_TargetsFilter_uddlResponsibleFor" placeholder="Search" data-bind="textInput: searchText, hasFocus: searchHasFocus()" class="selectCheckboxSearch">
+                    <div class="select-with-search--userlist">
+                        <div class="theSelectAllCheckBox" data-bind="visible: filteredArchivedUsers().length > 0" style="display: none;">
+                            <label for="chkSelectAll_cphMain_TargetsFilter_uddlResponsibleFor" class="line-height--two">
+                                <input id="chkSelectAll_cphMain_TargetsFilter_uddlResponsibleFor" type="checkbox" data-bind="checked: selectAll">
+                                <span>Select All</span>
+                            </label>
+                        </div>
+                        <!-- ko if: filteredActiveUsers().length > 0 -->
+
+                            <label for="chkSelectAllActive_cphMain_TargetsFilter_uddlResponsibleFor" class="line-height--two">
+                                <input id="chkSelectAllActive_cphMain_TargetsFilter_uddlResponsibleFor" type="checkbox" data-bind="checked: selectAllActive">
+                                <strong class="line-height--two">Active Users</strong>
+                            </label>
+                            <div style="margin-left: 14.5px" ,="" data-bind="foreach: filteredActiveUsers">
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="236918_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="236918_cphMain_TargetsFilter_uddlResponsibleFor" value="236918">
+                                    <span data-bind="text: $data.nameForDropDowns">Adam Bramhill</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="236103_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="236103_cphMain_TargetsFilter_uddlResponsibleFor" value="236103">
+                                    <span data-bind="text: $data.nameForDropDowns">Alex Clayton (AC)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="113775_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="113775_cphMain_TargetsFilter_uddlResponsibleFor" value="113775">
+                                    <span data-bind="text: $data.nameForDropDowns">Chris Angel (CA)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="141012_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="141012_cphMain_TargetsFilter_uddlResponsibleFor" value="141012">
+                                    <span data-bind="text: $data.nameForDropDowns">Grace Snow (G1)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="227909_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="227909_cphMain_TargetsFilter_uddlResponsibleFor" value="227909">
+                                    <span data-bind="text: $data.nameForDropDowns">Katerina Gk</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="58763_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="58763_cphMain_TargetsFilter_uddlResponsibleFor" value="58763">
+                                    <span data-bind="text: $data.nameForDropDowns">Maria Viejo (HEAD)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="215700_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="215700_cphMain_TargetsFilter_uddlResponsibleFor" value="215700">
+                                    <span data-bind="text: $data.nameForDropDowns">Nerea Tejedo Secondary (NTJ)</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="215695_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="215695_cphMain_TargetsFilter_uddlResponsibleFor" value="215695">
+                                    <span data-bind="text: $data.nameForDropDowns">Sarah Noblett</span>
+                                </label>
+                            
+                                <label data-bind="attr: {for: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }" class="line-height--two" for="214018_cphMain_TargetsFilter_uddlResponsibleFor">
+                                    <input type="checkbox" data-bind="attr: {id: $data.id + '_cphMain_TargetsFilter_uddlResponsibleFor' }, value: $data.id, checked: $parent.selectedActiveIds" id="214018_cphMain_TargetsFilter_uddlResponsibleFor" value="214018">
+                                    <span data-bind="text: $data.nameForDropDowns">Tim Stone (TS)</span>
+                                </label>
+                            </div>
+                        <!-- /ko -->
+                        <div class="js-archivedUsers">
+                        <!-- ko template: { if: filteredArchivedUsers().length > 0, afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        <!-- ko template: { if: (showArchived() && filteredArchivedUsers().length < 1), afterRender: scrollToArchivedUsers } --><!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+  </div><!--
+--><div class="grid__item desk-one-third">
+      <label for="e">Themes</label>
+      <select name="e" id="e">
+        <option value="0">-- Any --</option>
+        <option value="1"></option>
+      </select>
+  </div><!--
+--><div class="grid__item desk-one-third">
+       <label for="a">Type</label>
+  <select name="" id="a">
+    <option value="0">Targets &amp; Actions</option>
+    <option value="1"></option>
+  </select>
+  </div><!--
+--><div class="grid__item desk-one-third">
+    <label for="o">Other</label>
+    <select name="o" id="o">
+    <option value="0">-- Any --</option>
+    <option value="1"></option>
+  </select>
+  </div><!--
+--><div class="grid__item desk-one-third">
+    <li class="date-range">
+        <label>Date</label>
+        <select id="ddlAcademicYear" class="js-ddlAcademicYear push-half--bottom">
+            <option value="-99">Custom Date Range</option>
+            <option value="0" selected="selected">Current Academic Year</option>
+            <option value="-1">Previous Academic Year</option>
+        </select>
+
+        <span class="date-range__label text">
+            from:
+        </span><!--
+     --><input name="from" type="text" value="01/09/2019" id="from" class="js-date-picker text-input hasDatepicker"><!--
+     --><span class="date-range__label">to:</span><!--
+     --><input name="to" type="text" value="01/09/2020" id="to" class="js-date-picker text-input hasDatepicker">
+    </li>
+  </div></div>
+
+</div>
+  </div>
+
+<div class="page-width">
+<div class="push--top float--right">
+<button type="button" class="button button--quaternary--inverted push-half--right">Exports <span class="entypo--down-dir"></span></button>
+<button type="button" class="muted button button--quaternary--inverted">Assign selected <span class="entypo--down-dir"></span></button>
+</div>
+
+<table class="push--top table table--sef-style">
+  <thead>
+                            <tr>
+                                <th>
+                                    <span class="PersistedCheckedList_CheckBoxCheckAll">
+                                        <span style="float:none;"><input id="cphMain_ctl02_ListViewItems_cbkHeader" type="checkbox" name="ctl00$cphMain$ctl02$ListViewItems$cbkHeader"></span>
+                                    </span>
+                                </th>
+                                <th><abbr title="Red. Amber. Green">RAG</abbr></th> <acronym>
+                                <th></th>
+                                <th class="td-main-focus"><a>Title</a></th>
+                                <th><a>Team</a></th>
+                                <th><a>Responsible</a></th>
+                                <th><a>Monitor</a></th>
+
+                                <th><a>Priority</a></th>
+                                <th><a>Deadline</a></th>
+                                <th><a>Status</a></th>
+                                <th colspan="2"> </th>
+                           </tr>
+  </thead>                 
+<tbody>
+
+{% for target in targetList %}
+
+                           <tr>
+	<td style="display:none">
+                                <span id="cphMain_ctl02_ListViewItems_targetID_0">439914</span>
+                                Target
+                            </td>
+	<td class="firstPlanCol detailsButton">
+                                <span class="PersistedCheckedList_CheckBoxCheckNormal" style="margin-left:auto; margin-right:auto; width:20px; display:inline-block;">
+                                    <input id="cphMain_ctl02_ListViewItems_chbSelection_0" type="checkbox" name="ctl00$cphMain$ctl02$ListViewItems$ctrl0$chbSelection">
+                                    <input type="hidden" name="ctl00$cphMain$ctl02$ListViewItems$ctrl0$HiddenFieldItemID" id="cphMain_ctl02_ListViewItems_HiddenFieldItemID_0" value="439914">
+                                </span>
+                            </td>
+    <td>
+        {% if target.Rag == "R" %}
+        <span class="status-indicator status-rag--red no-border" title="Red"></span>
+        {% elsif target.Rag == "A" %}
+        <span class="status-indicator status-rag--amber no-border" title="Amber"></span>
+        {% else %}
+        <span class="status-indicator status-rag--green no-border" title="Green"></span>
+        {% endif %}
+    </td>
+    <td class="delta position--relative" style="width:25px;">
+        {% capture new_var %}Sub-Target of: 
+{{target.Title}} ({{target.ParentTarget}}){% endcapture %}
+        {% if target.ParentTarget == "-" %}
+            <span style="position: absolute; top:8px;" class="entypo--target" title="Target"></span>
+        {% else %}
+            <span style="position: absolute; top:8px " class="entypo--level-down" title="{{ new_var }}"></span>
+        {% endif %}
+    </td>
+		<td><a href="#"><strong>{{target.Title}}</strong></a><p class="flush"><em>{{target.Ref}}</em></p></td>
+	<td>{{target.Team}}</td>
+	<td>{{target.Responsible}} </td>
+    <td>{{target.Monitor}}</td>
+	
+	<td id="cphMain_ctl02_ListViewItems_parentTargetText_0" style="display:none;">
+                                -
+                            </td>
+	<td>
+            {% if target.Priority == "Key" or target.Priority == "High" %}
+    <strong>{{target.Priority}}</strong>
+    {% else %}
+    {{target.Priority}}
+    {% endif %}
+    </td>
+	<td class="inadequate">
+    {% if target.Overdue %}
+    <strong class="grade-badge grade-badge--small grade-badge--inadequate" title="Overdue"><span class="entypo--flag"></span> {{target.Deadline}}</strong>
+    {% else %}
+    {{target.Deadline}}
+    {% endif %}
+  </td>
+	<td class="req good outstanding no-grade">
+{% case target.Status %}
+  {% when 'Not Started' %}
+     <span class="grade-badge grade-badge--small grade-badge--req">Not Started</span>
+  {% when 'In Progress' %}
+    <span class="grade-badge grade-badge--small grade-badge--good">In Progress</span>
+  {% when 'Completed' %}
+    <span class="grade-badge grade-badge--small grade-badge--outstanding">Completed</span>
+  {% else %}
+     <span class="grade-badge grade-badge--small grade-badge--no-grade">Cancelled</span>
+{% endcase %}
+  </td>
+	<td class="detailsButton tableIcon">
+                               <span class="btn--subtle js-table-accordion"> 
+                                    <span class="table-accordion__contents">Open <span class="entypo--down-open"></span></span>
+                                    <span class="table-accordion__contents visuallyhidden">Close <span class="entypo--up-open"></span></span>
+                                </span>
+                            </td>
+	
+	<td id="cphMain_ctl02_ListViewItems_deleteButtonRow_0" class="deleteButton disabledHolder last">
+                                <span class="btn--subtle" title="View Details
+Duplicate
+Delete
++ to Plan
++ to SEF"><span class="entypo--dot-3"></span></span>
+                            </td>
+</tr>
+<tr class="detail-row visuallyhidden">
+    <td class=" hard--top"></td>
+    <td class=" hard--top"></td>
+    <td class=" hard--top"></td>
+    <td class="text--left hard--top" colspan="4">
+        <hr class="rule flush--top push-half--bottom" />
+        <p class="flush italic">Vestibulum vitae aliquam leo, eget sodales nibh. Praesent eu ipsum bibendum, sollicitudin elit bibendum, sagittis elit. Maecenas vitae odio dui. Mauris ornare auctor mi efficitur vulputate. Fusce faucibus tempus dapibus. Morbi rutrum auctor malesuada. In at ornare neque, nec ornare augue. Nulla a malesuada ante. Morbi id sollicitudin odio.</p></td>
+    <td class=" hard--top"><hr class="rule flush--top push-half--bottom" /></td>
+    <td class=" hard--top "><hr class="rule flush--top push-half--bottom" /><p>Created by: <br/><strong>{{target.Responsible}}</strong></p></td>
+    <td class=" hard--top text--left" colspan="5"><hr class="rule flush--top push-half--bottom" /><p><br/>on: <em>{{target.CreatedOn}}</em></p></td>
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<select name="ctl00$cphMain$ctl02$DropDownListItemsPerPage" id="cphMain_ctl02_DropDownListItemsPerPage">
+	<option selected="selected" value="10">10 items per page</option>
+	<option value="20">20 items per page</option>
+	<option value="30">30 items per page</option>
+	<option value="40">40 items per page</option>
+	<option value="50">50 items per page</option>
+	<option value="60">60 items per page</option>
+	<option value="70">70 items per page</option>
+</select>
+
+
+<style>
+.table--sef-style thead th{
+  border-bottom:0;
+}
+
+.table--sef-style tbody td{
+  border-top:1px solid #E3E8EC;
+  color:#405972;
+}
+
+.table--sef-style tbody td a{
+  color:#517190;
+}
+
+.overdue-text{color:#844739;}
+
+.grade-badge{
+    padding:0.38em 1em;
+}
+
+.btn--subtle{
+    color:#517190;
+    font-style: italic;
+    font-size:12px;
+    background:#f0f3f5;
+    padding:3px 8px;
+    border-radius:12px;
+    cursor:pointer;
+    border:1px solid #f0f3f5;
+    white-space: nowrap;
+}
+
+.btn--subtle:hover{
+    border:1px solid #517190;
+
+}
+
+.table--sef-style tbody .detail-row td
+{
+    border-top-color:white;
+}
+
+.td-main-focus{
+    max-width:434px;
+}
+
+.detail-row p{
+    max-width:650px;
+}
+
+.top-holder {
+  background-color: #f5f7f8;
+  padding:25px 0;
+}
+
+.page-content{
+    padding-top:0;
+}
+
+select{
+    height:36px;
+}
+
+.rule{
+  color: #E3E8EC;
+}
+
+</style>
+
+<script>
+$( ".js-table-accordion" ).click(function() {
+    $(this).toggleClass('is-open').parent().parent().next().toggleClass('visuallyhidden');
+    $(this).find(".table-accordion__contents").toggleClass('visuallyhidden');    
+});
+</script>

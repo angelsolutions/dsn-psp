@@ -1,16 +1,9 @@
 ---
 layout: layouts/default.html
-siteTitle: Giffleball
-images:
-  - bird.jpg
-  - chicken.jpg
-  - parrot.gif
 ---
-<!doctype html>
-  <h1>{{ siteTitle }}</h1>
 <ul>
-{% for filename in images %}
-{% capture path %}img/{{ filename }}{% endcapture %}
- <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a> {{ path | filesize }}</li>
-{% endfor %}
+ <li><a href="{{ '/targets-list/' | url }}">Target List</a></li>
+  <li><a href="{{ '/new-targets-list/' | url }}">New Target List (RAG incl.)</a></li>
+   <li><a href="{{ '/target-detail-simple/' | url }}">Target Detail (Simple)</a></li>
+   <li><a href="{{ '/target-detail-boxed/' | url }}">Target Detail (Boxed)</a></li>
 </ul>

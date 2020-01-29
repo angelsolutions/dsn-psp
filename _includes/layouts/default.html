@@ -21,7 +21,7 @@
 </div>
   {% if page.custom-js %}
     {% for customjs in page.custom-js %}
-      <script src='/js/{{customjs}}.js' type="text/javascript"></script>
+      <script src='{{"js/"{{customjs}}".js" | url }}' type="text/javascript"></script>
     {% endfor %}
   {% endif %}
   </body>

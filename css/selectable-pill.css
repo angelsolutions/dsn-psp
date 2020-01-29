@@ -1,0 +1,29 @@
+.tertiary--light{
+    background: #f3f5f7
+}
+
+.selectable-pill{
+    display:inline-block;
+    border:1px solid #698BAB;
+    background:#fff;
+    border-radius:2em;
+    padding: 3px 10px;
+    margin: 0 10px 10px 0;
+    color: #517190;
+    cursor: pointer;
+}
+
+.selectable-pill.is-selected, .selectable-pill.is-selected:hover{
+    background:#517190;
+    color: white;
+}
+
+.selectable-pill:hover{
+    border-color:#2c3d4e;
+    color:#2c3d4e;
+    background: #fcfcfd;
+}
+
+.no-plans{
+    opacity: 0.7;
+}

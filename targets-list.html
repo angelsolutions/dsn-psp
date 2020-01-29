@@ -1,0 +1,187 @@
+---
+layout: layouts/default.html
+---
+
+
+<div class="grid">
+  <div class="grid__item desk-one-third">
+    <h1 class="no-text-transform beta">Targets &amp; Actions</h1>
+  </div><div class="grid__item desk-two-thirds text--right">
+      <button type="button" class="button button--quaternary--inverted"><span class="entypo--plus"></span> New Target
+      </button>
+  
+    <button type="button" class="button button--quaternary--inverted push-half--left"><span class="entypo--plus"></span> New Action
+      </button>
+
+      <button type="button" class="button button--quaternary--inverted push-half--left"><span class="entypo--back"></span> Back
+      </button>
+  </div>
+</div>
+
+<div>
+<img class="one-whole" src="{{'/img/target-filters.png' | url}}" alt="">
+</div>
+
+<table class="push--top table table--sef-style">
+  <thead>
+                            <tr>
+                                <th>
+                                    <span class="PersistedCheckedList_CheckBoxCheckAll">
+                                        <span style="float:none;"><input id="cphMain_ctl02_ListViewItems_cbkHeader" type="checkbox" name="ctl00$cphMain$ctl02$ListViewItems$cbkHeader"></span>
+                                    </span>
+                                </th>
+                                <th><a>Ref</a></th>
+                                <th><a>Title</a></th>
+                                <th><a>Team</a></th>
+                                <th><a>Responsible</a></th>
+                                <th><a>Type</a></th>
+                                <th><a>Parent Target</a></th>
+                                <th><a>Priority</a></th>
+                                <th><a>Deadline</a></th>
+                                <th><a>Status</a></th>
+                                <th colspan="2"> </th>
+                           </tr>
+  </thead>                 
+<tbody>
+
+{% for target in targetList %}
+
+                           <tr>
+	<td style="display:none">
+                                <span id="cphMain_ctl02_ListViewItems_targetID_0">439914</span>
+                                Target
+                            </td>
+	<td class="firstPlanCol detailsButton">
+                                <span class="PersistedCheckedList_CheckBoxCheckNormal" style="margin-left:auto; margin-right:auto; width:20px; display:inline-block;">
+                                    <input id="cphMain_ctl02_ListViewItems_chbSelection_0" type="checkbox" name="ctl00$cphMain$ctl02$ListViewItems$ctrl0$chbSelection">
+                                    <input type="hidden" name="ctl00$cphMain$ctl02$ListViewItems$ctrl0$HiddenFieldItemID" id="cphMain_ctl02_ListViewItems_HiddenFieldItemID_0" value="439914">
+                                </span>
+                            </td>
+	<td><em>{{target.Ref}}</em></td>
+	<td><a href="#"><strong>{{target.Title}}</strong></a></td>
+	<td>{{target.Team}}</td>
+	<td>{{target.Responsible}} </td>
+	<td>{{target.Type}}</td>
+	<td>{% if target.ParentTarget != "-" %}
+  <a href="#">{{target.ParentTarget}}</a>
+  {% else %}
+  {{target.ParentTarget}}
+  {% endif %}
+  </td>                
+      
+  </td>
+	<td id="cphMain_ctl02_ListViewItems_parentTargetText_0" style="display:none;">
+                                -
+                            </td>
+	<td>
+    {% if target.Priority == "Key" or target.Priority == "High" %}
+    <strong>{{target.Priority}}</strong>
+    {% else %}
+    {{target.Priority}}
+    {% endif %}
+      </td>
+	<td class="inadequate">
+    {% if target.Overdue %}
+    <strong class="grade-badge grade-badge--small grade-badge--inadequate" title="Overdue"><span class="entypo--flag"></span> {{target.Deadline}}</strong>
+    {% else %}
+    {{target.Deadline}}
+    {% endif %}
+  </td>
+	<td class="req good outstanding no-grade">
+{% case target.Status %}
+  {% when 'Not Started' %}
+     <span class="grade-badge grade-badge--small grade-badge--req">Not Started</span>
+  {% when 'In Progress' %}
+    <span class="grade-badge grade-badge--small grade-badge--good">In Progress</span>
+  {% when 'Completed' %}
+    <span class="grade-badge grade-badge--small grade-badge--outstanding">Completed</span>
+  {% else %}
+     <span class="grade-badge grade-badge--small grade-badge--no-grade">Cancelled</span>
+{% endcase %}
+  </td>
+		<td class="detailsButton tableIcon">
+                               <span class="table-accordion"> 
+                                    <span class="table-accordion__contents">Open <span class="entypo--down-open"></span></span>
+                                    <span class="table-accordion__contents visuallyhidden">Close <span class="entypo--up-open"></span></span>
+                                </span>
+                            </td>
+	
+	<td id="cphMain_ctl02_ListViewItems_deleteButtonRow_0" class="deleteButton disabledHolder last">
+                                <span style="color:#517190;" class="entypo--trash"></span>
+                            </td>
+</tr><tr class="detail-row visuallyhidden">
+    <td class=" hard--top"></td>
+    <td class=" hard--top"></td>
+    <td class="text--left hard--top" colspan="3"><hr class="rule flush--top push-half--bottom" /><p class="flush italic">Vestibulum vitae aliquam leo, eget sodales nibh. Praesent eu ipsum bibendum, sollicitudin elit bibendum, sagittis elit. Maecenas vitae odio dui. Mauris ornare auctor mi efficitur vulputate. Fusce faucibus tempus dapibus. Morbi rutrum auctor malesuada. In at ornare neque, nec ornare augue. Nulla a malesuada ante. Morbi id sollicitudin odio.</p></td>
+    
+  <td style="vertical-align:bottom" class="text--left hard--top" colspan="3"><hr class="rule flush--top push-half--bottom" /><p>Monitor:<br/><strong>{{target.Monitor}}</strong></p></td>
+    <td style="vertical-align:bottom" class="text--left hard--top" colspan="3"><hr class="rule flush--top push-half--bottom" /><p>Created by: <br/><strong>{{target.Responsible}}</strong> on: <em>{{target.CreatedOn}}</em></p></td>
+    
+    
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+
+<style>
+.table--sef-style thead th{
+  border-bottom:0;
+}
+
+.table--sef-style tbody td{
+  border-top:1px solid #E3E8EC;
+  color:#405972;
+}
+
+.table--sef-style tbody td a{
+  color:#517190;
+}
+
+.overdue-text{color:#844739;}
+
+.grade-badge{
+    padding:0.38em 1em;
+}
+
+.table-accordion{
+    color:#517190;
+    font-style: italic;
+    font-size:12px;
+    background:#f0f3f5;
+    padding:3px 8px;
+    border-radius:12px;
+    cursor:pointer;
+    border:1px solid #f0f3f5;
+}
+
+.table-accordion:hover{
+    border:1px solid #517190;
+
+}
+
+.table--sef-style tbody .detail-row td
+{
+    border-top-color:white;
+}
+
+.td-main-focus{
+    max-width:434px;
+}
+
+.detail-row p{
+    max-width:650px;
+}
+
+.rule{
+  color: #E3E8EC;
+}
+</style>
+<script>
+$( ".table-accordion" ).click(function() {
+    $(this).toggleClass('is-open').parent().parent().next().toggleClass('visuallyhidden');
+    $(this).find(".table-accordion__contents").toggleClass('visuallyhidden');    
+});
+</script>
